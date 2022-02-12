@@ -9,9 +9,9 @@ use PHPUnit\Framework\TestCase;
 use Yiisoft\Definitions\Exception\InvalidConfigException;
 use Yiisoft\Di\Container;
 use Yiisoft\Di\ContainerConfig;
+use Yiisoft\Rbac\RuleFactoryInterface;
 use Yiisoft\Rbac\Rules\Container\RulesContainer;
 use Yiisoft\Rbac\Rules\Container\Tests\Support\AuthorRule;
-use Yiisoft\Rbac\RulesFactoryInterface;
 
 use function dirname;
 
@@ -21,7 +21,7 @@ final class ConfigTest extends TestCase
     {
         $container = $this->createContainer();
 
-        $rulesContainer = $container->get(RulesFactoryInterface::class);
+        $rulesContainer = $container->get(RuleFactoryInterface::class);
 
         $this->assertInstanceOf(RulesContainer::class, $rulesContainer);
     }
@@ -33,7 +33,7 @@ final class ConfigTest extends TestCase
         $params['yiisoft/rbac-rules-container']['validate'] = false;
         $container = $this->createContainer($params);
 
-        $rulesContainer = $container->get(RulesFactoryInterface::class);
+        $rulesContainer = $container->get(RuleFactoryInterface::class);
 
         $this->expectException(InvalidConfigException::class);
         $rulesContainer->create('rule');
@@ -45,7 +45,7 @@ final class ConfigTest extends TestCase
         $params['yiisoft/rbac-rules-container']['rules'] = ['rule' => AuthorRule::class];
         $container = $this->createContainer($params);
 
-        $rulesContainer = $container->get(RulesFactoryInterface::class);
+        $rulesContainer = $container->get(RuleFactoryInterface::class);
         $rule = $rulesContainer->create('rule');
 
         $this->assertInstanceOf(AuthorRule::class, $rule);
