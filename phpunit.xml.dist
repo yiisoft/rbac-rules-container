@@ -25,6 +25,7 @@
 
     <coverage>
         <include>
+            <directory>./config</directory>
             <directory>./src</directory>
         </include>
     </coverage>
