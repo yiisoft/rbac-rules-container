@@ -12,12 +12,12 @@ use Yiisoft\Factory\Factory;
 use Yiisoft\Factory\NotFoundException;
 use Yiisoft\Rbac\Exception\RuleInterfaceNotImplementedException;
 use Yiisoft\Rbac\Exception\RuleNotFoundException;
-use Yiisoft\Rbac\RuleContainerInterface;
 use Yiisoft\Rbac\RuleInterface;
+use Yiisoft\Rbac\RulesFactoryInterface;
 
 use function array_key_exists;
 
-final class RuleContainer implements RuleContainerInterface
+final class RulesContainer implements RulesFactoryInterface
 {
     private Factory $factory;
 
@@ -47,7 +47,7 @@ final class RuleContainer implements RuleContainerInterface
      * @throws InvalidConfigException
      * @throws NotInstantiableException
      */
-    public function get(string $name): RuleInterface
+    public function create(string $name): RuleInterface
     {
         if (!array_key_exists($name, $this->instances)) {
             try {
