@@ -13,11 +13,11 @@ use Yiisoft\Factory\NotFoundException;
 use Yiisoft\Rbac\Exception\RuleInterfaceNotImplementedException;
 use Yiisoft\Rbac\Exception\RuleNotFoundException;
 use Yiisoft\Rbac\RuleInterface;
-use Yiisoft\Rbac\RulesFactoryInterface;
+use Yiisoft\Rbac\RuleFactoryInterface;
 
 use function array_key_exists;
 
-final class RulesContainer implements RulesFactoryInterface
+final class RulesContainer implements RuleFactoryInterface
 {
     private Factory $factory;
 
