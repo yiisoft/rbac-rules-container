@@ -18,7 +18,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Yii _____ tests">
+        <testsuite name="Yii RBAC Rules Container tests">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
