@@ -28,22 +28,25 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0",
+        "yiisoft/factory": "^1.0",
+        "yiisoft/rbac": "^3.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "roave/infection-static-analysis-plugin": "^1.16",
         "spatie/phpunit-watcher": "^1.23",
-        "vimeo/psalm": "^4.18"
+        "vimeo/psalm": "^4.18",
+        "yiisoft/test-support": "^1.3"
     },
     "autoload": {
         "psr-4": {
-            "Yiisoft\\_____\\": "src"
+            "Yiisoft\\Rbac\\Rules\\Container\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Yiisoft\\_____\\Tests\\": "tests"
+            "Yiisoft\\Rbac\\Rules\\Container\\Tests\\": "tests"
         }
     },
     "config": {
