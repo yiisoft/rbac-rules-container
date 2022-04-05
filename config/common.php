@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Yiisoft\Rbac\Rules\Container\RulesContainer;
 use Yiisoft\Rbac\RuleFactoryInterface;
 
-/* @var array $params */
+/** @var array $params */
 
 return [
     RuleFactoryInterface::class => [
