@@ -18,7 +18,7 @@ final class RulesContainerTest extends TestCase
 {
     public function testCreate(): void
     {
-        $rulesContainer = new RulesContainer(new SimpleContainer(), []);
+        $rulesContainer = new RulesContainer(new SimpleContainer());
 
         $rule = $rulesContainer->create(AuthorRule::class);
 
@@ -27,7 +27,7 @@ final class RulesContainerTest extends TestCase
 
     public function testNotFound(): void
     {
-        $rulesContainer = new RulesContainer(new SimpleContainer(), []);
+        $rulesContainer = new RulesContainer(new SimpleContainer());
 
         $this->expectException(RuleNotFoundException::class);
         $this->expectExceptionMessage('Rule "not-exists-rule" not found.');

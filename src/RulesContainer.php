@@ -32,7 +32,7 @@ final class RulesContainer implements RuleFactoryInterface
      *
      * @throws InvalidConfigException
      */
-    public function __construct(ContainerInterface $container, array $definitions, bool $validate = true)
+    public function __construct(ContainerInterface $container, array $definitions = [], bool $validate = true)
     {
         $this->factory = new Factory($container, $definitions, $validate);
     }

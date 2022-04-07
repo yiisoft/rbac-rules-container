@@ -15,8 +15,10 @@
 [![static analysis](https://github.com/yiisoft/rbac-rules-container/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/rbac-rules-container/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yiisoft/rbac-rules-container/coverage.svg)](https://shepherd.dev/github/yiisoft/rbac-rules-container)
 
-The package provides rules container for [Yii RBAC (Role-Based Access Control)](https://github.com/yiisoft/rbac) package
-based on [Yii Factory](https://github.com/yiisoft/factory).
+This package is a factory for creating [Yii RBAC (Role-Based Access Control)](https://github.com/yiisoft/rbac) rules. It 
+provides rules container wrapping [Yii Factory](https://github.com/yiisoft/factory) and uses 
+[Yii Definitions](https://github.com/yiisoft/definitions) syntax. RBAC manager considers rule as a name and parameters
+and unaware of its creation by design, delegating creation to rules container keeping responsibilities separation.
 
 ## Requirements
 
@@ -31,6 +33,73 @@ composer require yiisoft/rbac-rules-container --prefer-dist
 ```
 
 ## General usage
+
+### Direct interaction with rules container
+
+```php
+use Psr\Container\ContainerInterface;
+use Yiisoft\Rbac\Item;
+use Yiisoft\Rbac\RuleInterface;
+use Yiisoft\Rbac\Rules\Container\RulesContainer;
+
+/**
+ * Checks if user ID matches `authorID` passed via parameters.
+ */
+final class AuthorRule implements RuleInterface
+{
+    public function execute(string $userId, Item $item, array $parameters = []): bool
+    {
+        return $parameters['authorID'] === $userId;
+    }
+}
+
+$rulesContainer = new RulesContainer(new MyContainer());
+$rule = $rulesContainer->create(AuthorRule::class);
+```
+
+- `MyContainer` is a container for resolving dependencies and  must be an instance of 
+`Psr\Container\ContainerInterface`.  [Yii Dependency Injection](https://github.com/yiisoft/di) implementation also can 
+be used.
+- You can optionally set [definitions](https://github.com/yiisoft/definitions) and disable their validation if needed.
+
+Basically, the arguments are the same as in [Yii Factory](https://github.com/yiisoft/factory). Please refer to its docs 
+for more details.
+
+Rules are created only once, then cached and reused for repeated calls.
+
+```php
+$rule = $rulesContainer->create(AuthorRule::class); // Returned from cache
+````
+
+### Using config
+
+```php
+use Yiisoft\Di\Container;
+use Yiisoft\Di\ContainerConfig;
+use Yiisoft\Rbac\RuleFactoryInterface;
+use Yiisoft\Rbac\Rules\Container\RulesContainer;
+
+// Can be moved to separate files
+$params = [
+    'yiisoft/rbac-rules-container' => [
+        'rules' => ['author' => AuthorRule::class],
+        'validate' => false,
+    ],
+];
+$config = [
+    RuleFactoryInterface::class => [
+        'class' => RulesContainer::class,
+        '__construct()' => [
+            'definitions' => $params['yiisoft/rbac-rules-container']['rules'],
+            'validate' => $params['yiisoft/rbac-rules-container']['validate'],
+        ],
+    ],
+];          
+$containerConfig = ContainerConfig::create()->withDefinitions($config); 
+$container = new Container($containerConfig);
+$rulesContainer = $container->get(RuleFactoryInterface::class);        
+$rule = $rulesContainer->create('author');
+```
 
 ## Testing
 

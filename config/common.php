@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Yiisoft\Rbac\Rules\Container\RulesContainer;
 use Yiisoft\Rbac\RuleFactoryInterface;
+use Yiisoft\Rbac\Rules\Container\RulesContainer;
 
 /** @var array $params */
 
