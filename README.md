@@ -16,9 +16,9 @@
 [![type-coverage](https://shepherd.dev/github/yiisoft/rbac-rules-container/coverage.svg)](https://shepherd.dev/github/yiisoft/rbac-rules-container)
 
 This package is a factory for creating [Yii RBAC (Role-Based Access Control)](https://github.com/yiisoft/rbac) rules. It 
-provides rules container wrapping [Yii Factory](https://github.com/yiisoft/factory) and uses 
-[Yii Definitions](https://github.com/yiisoft/definitions) syntax. RBAC manager considers rule as a name and parameters
-and unaware of its creation by design, delegating creation to rules container keeping responsibilities separation.
+provides rules container based on [Yii Factory](https://github.com/yiisoft/factory) and uses 
+[Yii Definitions](https://github.com/yiisoft/definitions) syntax. RBAC manager accepts rule as a name and parameters
+and is unaware of its creation by design, delegating creation to rules container keeping responsibilities separation.
 
 ## Requirements
 
