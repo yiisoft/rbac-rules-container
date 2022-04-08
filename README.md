@@ -58,7 +58,7 @@ $rule = $rulesContainer->create(AuthorRule::class);
 ```
 
 - `MyContainer` is a container for resolving dependencies and  must be an instance of 
-`Psr\Container\ContainerInterface`.  [Yii Dependency Injection](https://github.com/yiisoft/di) implementation also can 
+`Psr\Container\ContainerInterface`. [Yii Dependency Injection](https://github.com/yiisoft/di) implementation also can 
 be used.
 - You can optionally set [definitions](https://github.com/yiisoft/definitions) and disable their validation if needed.
 
