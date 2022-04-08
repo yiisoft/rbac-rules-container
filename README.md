@@ -71,7 +71,7 @@ Rules are created only once, then cached and reused for repeated calls.
 $rule = $rulesContainer->create(AuthorRule::class); // Returned from cache
 ````
 
-### Using config
+### Using [Yii config](https://github.com/yiisoft/config)
 
 ```php
 use Yiisoft\Di\Container;
@@ -79,7 +79,7 @@ use Yiisoft\Di\ContainerConfig;
 use Yiisoft\Rbac\RuleFactoryInterface;
 use Yiisoft\Rbac\Rules\Container\RulesContainer;
 
-// Can be moved to separate files
+// Need to be moved to separate files accordingly
 $params = [
     'yiisoft/rbac-rules-container' => [
         'rules' => ['author' => AuthorRule::class],
