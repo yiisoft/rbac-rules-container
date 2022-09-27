@@ -38,7 +38,6 @@ final class RulesContainer implements RuleFactoryInterface
     }
 
     /**
-     * @param string $name
      *
      * @throws RuleInterfaceNotImplementedException
      * @throws RuleNotFoundException
@@ -46,7 +45,6 @@ final class RulesContainer implements RuleFactoryInterface
      * @throws InvalidConfigException
      * @throws NotInstantiableException
      *
-     * @return RuleInterface
      */
     public function create(string $name): RuleInterface
     {
