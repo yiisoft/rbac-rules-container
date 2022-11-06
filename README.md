@@ -22,14 +22,14 @@ and is unaware of its creation by design, delegating creation to rules container
 
 ## Requirements
 
-- PHP 7.4 or higher.
+- PHP 8.0 or higher.
 
 ## Installation
 
 The package could be installed with composer:
 
 ```shell
-composer require yiisoft/rbac-rules-container --prefer-dist
+composer require yiisoft/rbac-rules-container
 ```
 
 ## General usage
