@@ -32,7 +32,7 @@
     "require": {
         "php": "^8.0",
         "psr/container": "^1.0|^2.0",
-        "yiisoft/definitions": "^1.0|^2.0",
+        "yiisoft/definitions": "^3.0.1",
         "yiisoft/factory": "^1.0",
         "yiisoft/rbac": "^1.0"
     },
