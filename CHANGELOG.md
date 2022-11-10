@@ -1,6 +1,6 @@
 # Yii RBAC Rules Container Change Log
 
-## 1.0.2 under development
+## 1.1.0 November 10, 2022
 
 - Enh #11, #13: Raise minimum PHP version to `^8.0` (@xepozz, @vjik)
 - Enh #15: Add support for `yiisoft/definitions` version `^3.0` (@vjik)
