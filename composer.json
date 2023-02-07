@@ -69,7 +69,7 @@
         },
         "config-plugin": {
             "params": "params.php",
-            "common": "common.php"
+            "di-web": "di-web.php"
         }
     },
     "scripts": {
