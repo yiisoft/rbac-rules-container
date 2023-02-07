@@ -65,7 +65,7 @@ final class ConfigTest extends TestCase
         if ($params === null) {
             $params = $this->getParams();
         }
-        return require dirname(__DIR__) . '/config/di-web.php';
+        return require dirname(__DIR__) . '/config/di.php';
     }
 
     private function getParams(): array
