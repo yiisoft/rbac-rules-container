@@ -1,5 +1,9 @@
 # Yii RBAC Rules Container Change Log
 
+## 2.0.1 under development
+
+- no changes in this release.
+
 ## 2.0.0 February 16, 2023
 
 - Chg #25: Adapt configuration group names to Yii conventions (@vjik)
