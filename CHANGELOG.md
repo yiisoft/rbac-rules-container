@@ -2,7 +2,7 @@
 
 ## 2.0.1 under development
 
-- no changes in this release.
+- Chg #35: Raise minimum PHP version to 8.1 (@arogachev) 
 
 ## 2.0.0 February 16, 2023
 
