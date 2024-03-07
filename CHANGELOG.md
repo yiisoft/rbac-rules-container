@@ -1,8 +1,8 @@
 # Yii RBAC Rules Container Change Log
 
-## 2.0.1 under development
+## 2.1.0 March 07, 2024
 
-- Chg #35: Raise minimum PHP version to 8.1 (@arogachev) 
+- Chg #35: Raise minimum PHP version to 8.1 (@arogachev)
 
 ## 2.0.0 February 16, 2023
 
