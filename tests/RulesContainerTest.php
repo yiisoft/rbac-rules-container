@@ -40,7 +40,7 @@ final class RulesContainerTest extends TestCase
         $rulesContainer = new RulesContainer(new SimpleContainer(), ['rule' => new stdClass()]);
 
         $this->expectException(RuleInterfaceNotImplementedException::class);
-        $this->expectExceptionMessage('Rule "rule" should implement "' . RuleInterface::class . '".');
+        $this->expectExceptionMessage('Rule "rule" must implement "' . RuleInterface::class . '".');
         $this->expectExceptionCode(0);
         $rulesContainer->create('rule');
     }
