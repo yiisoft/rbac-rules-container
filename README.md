@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://yiisoft.github.io/docs/images/yii_logo.svg" height="100px">
+        <img src="https://yiisoft.github.io/docs/images/yii_logo.svg" height="100px" alt="Yii">
     </a>
     <h1 align="center">Yii RBAC Rules Container</h1>
     <br>
@@ -15,8 +15,8 @@
 [![static analysis](https://github.com/yiisoft/rbac-rules-container/workflows/static%20analysis/badge.svg)](https://github.com/yiisoft/rbac-rules-container/actions?query=workflow%3A%22static+analysis%22)
 [![type-coverage](https://shepherd.dev/github/yiisoft/rbac-rules-container/coverage.svg)](https://shepherd.dev/github/yiisoft/rbac-rules-container)
 
-This package is a factory for creating [Yii RBAC (Role-Based Access Control)](https://github.com/yiisoft/rbac) rules. It 
-provides rules container based on [Yii Factory](https://github.com/yiisoft/factory) and uses 
+This package is a factory for creating [Yii RBAC (Role-Based Access Control)](https://github.com/yiisoft/rbac) rules. It
+provides rules container based on [Yii Factory](https://github.com/yiisoft/factory) and uses
 [Yii Definitions](https://github.com/yiisoft/definitions) syntax. RBAC manager accepts rule as a name and parameters
 and is unaware of its creation by design, delegating creation to rules container keeping responsibilities separation.
 
@@ -57,12 +57,12 @@ $rulesContainer = new RulesContainer(new MyContainer());
 $rule = $rulesContainer->create(AuthorRule::class);
 ```
 
-- `MyContainer` is a container for resolving dependencies and  must be an instance of 
-`Psr\Container\ContainerInterface`. [Yii Dependency Injection](https://github.com/yiisoft/di) implementation also can 
+- `MyContainer` is a container for resolving dependencies and  must be an instance of
+`Psr\Container\ContainerInterface`. [Yii Dependency Injection](https://github.com/yiisoft/di) implementation also can
 be used.
 - You can optionally set [definitions](https://github.com/yiisoft/definitions) and disable their validation if needed.
 
-Basically, the arguments are the same as in [Yii Factory](https://github.com/yiisoft/factory). Please refer to its docs 
+Basically, the arguments are the same as in [Yii Factory](https://github.com/yiisoft/factory). Please refer to its docs
 for more details.
 
 Rules are created only once, then cached and reused for repeated calls.
