@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Yiisoft\Rbac\Rules\Container\Tests;
 
 use PHPUnit\Framework\TestCase;
-
 use Yiisoft\Definitions\Exception\InvalidConfigException;
 use Yiisoft\Di\Container;
 use Yiisoft\Di\ContainerConfig;
