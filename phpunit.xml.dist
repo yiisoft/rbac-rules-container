@@ -3,12 +3,8 @@
 <phpunit
     bootstrap="vendor/autoload.php"
     colors="true"
-    verbose="true"
     failOnRisky="true"
     failOnWarning="true"
-    convertErrorsToExceptions="true"
-    convertNoticesToExceptions="true"
-    convertWarningsToExceptions="true"
     stopOnFailure="false"
     executionOrder="random"
     resolveDependencies="true"
@@ -23,10 +19,10 @@
         </testsuite>
     </testsuites>
 
-    <coverage>
+    <source>
         <include>
             <directory>./config</directory>
             <directory>./src</directory>
         </include>
-    </coverage>
+    </source>
 </phpunit>
