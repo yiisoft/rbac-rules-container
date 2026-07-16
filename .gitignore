@@ -22,9 +22,5 @@ Thumbs.db
 # composer itself is not needed
 composer.phar
 
-# phpunit itself is not needed
-phpunit.phar
-# local phpunit config
+# Local PHPUnit config
 /phpunit.xml
-# phpunit cache
-.phpunit.result.cache
