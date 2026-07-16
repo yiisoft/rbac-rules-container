@@ -38,7 +38,7 @@
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^4.2",
-        "phpunit/phpunit": "^10.5",
+        "phpunit/phpunit": "^10.5.63",
         "rector/rector": "^2.5.2",
         "roave/infection-static-analysis-plugin": "^1.18",
         "spatie/phpunit-watcher": "^1.23",
@@ -73,7 +73,7 @@
         }
     },
     "scripts": {
-        "test": "phpunit --testdox",
+        "test": "phpunit --display-deprecations",
         "test-watch": "phpunit-watcher watch"
     }
 }
