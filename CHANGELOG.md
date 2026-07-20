@@ -2,7 +2,7 @@
 
 ## 2.1.1 under development
 
-- no changes in this release.
+- Chg #51: Change PHP version constraint to `8.1 - 8.5` (@vjik)
 
 ## 2.1.0 March 07, 2024
 

@@ -25,5 +25,5 @@ jobs:
       os: >-
         ['ubuntu-latest']
       php: >-
-        ['8.4']
+        ['8.5']
       composer-require-options: '--with-all-dependencies --ignore-platform-reqs --no-security-blocking --no-progress --ansi'
