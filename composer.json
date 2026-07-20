@@ -37,12 +37,14 @@
         "yiisoft/rbac": "^2.0"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.95",
         "maglnet/composer-require-checker": "^4.2",
         "phpunit/phpunit": "^10.5.63",
         "rector/rector": "^2.5.2",
         "roave/infection-static-analysis-plugin": "^1.18",
         "spatie/phpunit-watcher": "^1.23",
         "vimeo/psalm": "^4.30|^5.6|^6.0",
+        "yiisoft/code-style": "^1.0",
         "yiisoft/di": "^1.0",
         "yiisoft/test-support": "^3.0"
     },
@@ -73,6 +75,8 @@
         }
     },
     "scripts": {
+        "cs-fix": "php-cs-fixer fix",
+        "rector": "rector",
         "test": "phpunit --display-deprecations",
         "test-watch": "phpunit-watcher watch"
     }
