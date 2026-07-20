@@ -2,7 +2,8 @@ name: rector-cs
 
 on:
   pull_request:
-    paths: &paths
+    paths:
+      - 'config/**'
       - 'src/**'
       - 'tests/**'
       - 'rector.php'
