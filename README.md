@@ -21,7 +21,7 @@ and is unaware of its creation by design, delegating creation to rules container
 
 ## Requirements
 
-- PHP 8.1 or higher.
+- PHP 8.1 - 8.5.
 
 ## Installation
 
