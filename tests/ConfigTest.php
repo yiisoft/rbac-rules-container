@@ -54,8 +54,8 @@ final class ConfigTest extends TestCase
     {
         return new Container(
             ContainerConfig::create()->withDefinitions(
-                $this->getDiConfig($params)
-            )
+                $this->getDiConfig($params),
+            ),
         );
     }
 
